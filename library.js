@@ -83,6 +83,7 @@
 					// Save facebook-specific information to the user
 					user.setUserField(uid, 'fbid', fbid);
 					db.setObjectField('fbid:uid', fbid, uid);
+					user.setUserField(uid, 'email:confirmed', 1);
 
 					// Save their photo, if present
 					if (picture) {
