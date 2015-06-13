@@ -1,8 +1,8 @@
 {
-	"id": "nodebb-plugin-sso-facebook",
-	"name": "NodeBB Facebook SSO",
+	"id": "nodebb-plugin-sso-facebook-confirmed",
+	"name": "NodeBB Facebook SSO Auto Confirmed",
 	"description": "NodeBB Plugin that allows users to login/register via their Facebook account.",
-	"url": "https://github.com/julianlam/nodebb-plugin-sso-facebook",
+	"url": "https://github.com/drewdotpro/nodebb-plugin-sso-facebook-confirmed",
 	"library": "./library.js",
 	"templates": "templates",
 	"hooks": [

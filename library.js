@@ -14,7 +14,7 @@
 	var constants = Object.freeze({
 		'name': 'Facebook',
 		'admin': {
-			'route': '/plugins/sso-facebook',
+			'route': '/plugins/sso-facebook-confirmed',
 			'icon': 'fa-facebook-square'
 		}
 	});
@@ -23,11 +23,11 @@
 
 	Facebook.init = function(params, callback) {
 		function render(req, res) {
-			res.render('admin/plugins/sso-facebook', {});
+			res.render('admin/plugins/sso-facebook-confirmed', {});
 		}
 
-		params.router.get('/admin/plugins/sso-facebook', params.middleware.admin.buildHeader, render);
-		params.router.get('/api/admin/plugins/sso-facebook', render);
+		params.router.get('/admin/plugins/sso-facebook-confirmed', params.middleware.admin.buildHeader, render);
+		params.router.get('/api/admin/plugins/sso-facebook-confirmed', render);
 
 		callback();
 	};
@@ -144,7 +144,7 @@
 			}
 		], function(err) {
 			if (err) {
-				winston.error('[sso-facebook] Could not remove OAuthId data for uid ' + uid + '. Error: ' + err);
+				winston.error('[sso-facebook-confirmed] Could not remove OAuthId data for uid ' + uid + '. Error: ' + err);
 				return callback(err);
 			}
 			callback(null, uid);
