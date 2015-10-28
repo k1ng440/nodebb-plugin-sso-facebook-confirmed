@@ -36,8 +36,8 @@
 			res.render('admin/plugins/sso-facebook-confirmed', {});
 		}
 
-		params.router.get('/admin/plugins/sso-facebook', params.middleware.admin.buildHeader, render);
-		params.router.get('/api/admin/plugins/sso-facebook', render);
+		params.router.get('/admin/plugins/sso-facebook-confirmed', params.middleware.admin.buildHeader, render);
+		params.router.get('/api/admin/plugins/sso-facebook-confirmed', render);
 		callback();
 	};
 
